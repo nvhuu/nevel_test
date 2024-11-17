@@ -7,8 +7,25 @@
         z-index: 10;
 
         &__content {
+
             position: relative;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 7%, rgba(0, 0, 0, 0) 70%);
+        }
+
+        @media (max-width:767px) {
+            height: 100px;
+            padding-top: 14px;
+            padding-left: 17px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 100%);
+
+            &__content {
+                background: unset;
+
+                .logo {
+                    width: 53px;
+                }
+            }
+
         }
 
     }

@@ -1,6 +1,7 @@
 .cardItem {
     &__thumbnail {
         border-radius: 10px;
+        height: 222px;
     }
 
     &__title {
@@ -34,5 +35,27 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
 
+    }
+
+    @media (max-width:768px) {
+        border-radius: 14px;
+        overflow: hidden;
+        height: auto;
+        max-width: 310px;
+        margin: auto;
+
+        &__thumbnail {
+            border-radius: 0;
+        }
+
+        &__title {
+            font-size: 16px !important;
+            line-height: 20px;
+        }
+
+        &__description {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 }

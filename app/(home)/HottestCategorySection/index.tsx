@@ -5,6 +5,8 @@ import AppIcon1 from "@/public/images/appIcon1.png";
 import AppThumbnail1 from "@/public/images/appThumbnail.png";
 import ArrowIcon from "@/public/images/icons/arrowIcon.svg";
 import MusicIcon from "@/public/images/icons/musicIcon.svg";
+import Poker from "@/public/images/poker.png";
+import PokerIcon from "@/public/images/pokerIcon.svg";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import "./style.scss";
@@ -28,11 +30,10 @@ export default function HottestCategorySection() {
     },
     {
       cardInfo: {
-        icon: MusicIcon,
-        title: "Music",
-        subtitle:
-          "Music makes everything better, and these games will grove to it!",
-        bgColor: "#5C6EFF",
+        icon: PokerIcon,
+        title: "Table Games",
+        subtitle: "The classic table games for the gentlemen and ladies.",
+        bgColor: "#19796A",
       },
       icons: [
         { thumbnail: AppIcon1.src, url: "/" },
@@ -40,7 +41,7 @@ export default function HottestCategorySection() {
         { thumbnail: AppIcon1.src, url: "/" },
         { thumbnail: AppIcon1.src, url: "/" },
       ],
-      thumbnail: { thumbnail: AppThumbnail1.src, url: "/" },
+      thumbnail: { thumbnail: Poker.src, url: "/" },
     },
     {
       cardInfo: {
@@ -78,7 +79,8 @@ export default function HottestCategorySection() {
       ((count > 0 && canScrollRight) || (count < 0 && canScrollLeft))
     ) {
       const containerWidth = scrollContainerRef.current.clientWidth;
-      const scrollAmount = containerWidth / 2 + 10;
+      const scrollAmount = Math.max(containerWidth / 2 + 10, 500);
+
       const { scrollLeft, clientWidth, scrollWidth } =
         scrollContainerRef.current;
       let newScrollLeft = scrollLeft + scrollAmount * count;
@@ -92,9 +94,9 @@ export default function HottestCategorySection() {
 
   return (
     <div className="hottest flex flex-col mb-4">
-      <div className="hottest__header flex justify-between">
+      <div className="hottest__header flex justify-between px-6 md:px-0">
         <span className="text-header">Hottest Category</span>
-        <div className="actionGroup flex ">
+        <div className="hidden md:flex actionGroup">
           <div
             className={`arrowToLeft ${
               canScrollLeft

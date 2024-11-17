@@ -2,6 +2,7 @@ export interface IMenuGame {
   icon: string;
   title: string;
   value: string;
+  mobileTitle?: string;
 }
 export interface ICardItem {
   thumbnail: string;
@@ -9,6 +10,8 @@ export interface ICardItem {
   icon: string;
   title: string;
   description: string;
+  advanceInfo?: { title: string; subtitle: string }[];
+  bgColor?: string;
 }
 export interface IGameInfo {
   thumbnail: string;

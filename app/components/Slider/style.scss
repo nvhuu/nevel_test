@@ -42,8 +42,10 @@
 
     .dotGroup {
         position: absolute;
+        z-index: 1;
         height: 50px;
-        bottom: 20px;
+        bottom: 95px;
+        width: 100%;
         display: flex;
         gap: 21px;
         justify-content: center;
@@ -82,6 +84,12 @@
 
                 }
             }
+        }
+
+        @media (min-width: 768px) {
+            bottom: 20px;
+            left: 0;
+            justify-content: flex-start;
         }
     }
 }

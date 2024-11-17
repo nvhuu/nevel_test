@@ -27,4 +27,23 @@
             }
         }
     }
+
+    @media (max-width:768px) {
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        width: fit-content;
+        border-radius: 20px;
+        background-color: #474646;
+        line-height: 25px;
+
+        &__item {
+            height: 20px;
+
+            &.active {
+                display: none;
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
 }

@@ -39,3 +39,8 @@ p {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+@media (max-width:768px) {
+  .text-header {
+    font-size: 18px;
+  }
+}

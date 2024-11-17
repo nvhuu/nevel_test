@@ -31,10 +31,31 @@
 
     .border-20 {
         border-radius: 20px;
-        width: 210px;
+        width: var(--card-width);
     }
 
-    .groupIcon {
-        // width: var(--card-width);
+    @media (max-width:768px) {
+        height: 292px;
+        --card-width: 167px;
+
+        .cardInfo {
+            border-radius: 16px;
+
+            &__title {
+                font-size: 17.27px;
+                line-height: 12.76px;
+            }
+
+            &__subtitle {
+                font-size: 10.99px;
+                line-height: 15.95px;
+            }
+        }
+
+        .groupIcon {
+            width: 76px;
+            height: 76px;
+        }
+
     }
 }

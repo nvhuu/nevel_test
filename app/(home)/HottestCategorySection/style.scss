@@ -12,10 +12,20 @@
 
         .hottestCard {
             flex: 0 0 calc(50% - 10px);
+            min-width: 490px;
+        }
+
+        @media (max-width:768px) {
+            .hottestCard {
+                width: 390px;
+                min-width: 390px;
+            }
         }
     }
 
     .hottest__main::-webkit-scrollbar {
         display: none;
     }
+
+
 }

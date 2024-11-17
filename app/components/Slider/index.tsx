@@ -36,7 +36,7 @@ export default function Slider(props: SliderProps) {
           {el}
         </div>
       ))}
-      <div className="container w-full h-full relative">
+      <div className="container w-full h-full relative z-0">
         <div className="dotGroup px-5">
           {content.map((_, index) => (
             <div

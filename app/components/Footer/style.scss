@@ -65,4 +65,34 @@
             text-transform: uppercase;
         }
     }
+
+    @media (max-width: 768px) {
+        border: none;
+
+        &__main {
+            padding: 0 25px 100px 25px;
+
+            .info {
+                border-bottom: none;
+
+                &__left {
+                    .text {
+                        margin-top: 50px;
+                        font-size: 11.44px;
+                        font-weight: 400;
+                        line-height: 14px;
+                        text-underline-position: from-font;
+                        text-decoration-skip-ink: none;
+                        opacity: 0.3;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .menuMobile {
+            height: 74px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06)
+        }
+    }
 }

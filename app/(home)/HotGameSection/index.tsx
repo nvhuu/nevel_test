@@ -2,7 +2,11 @@
 import CardItem from "@/app/components/CardItem";
 import { ICardItem } from "@/app/types";
 import GameIcon1 from "@/public/images/gameIcon1.png";
+import HotGameBannerMb from "@/public/images/hotGameBanerMb.png";
 import HotGameBanner1 from "@/public/images/hotGameBanner1.png";
+import HotGameBanner2 from "@/public/images/hotGameBanner2.png";
+import GameIcon2 from "@/public/images/hotGameIcon1.png";
+import GameIcon3 from "@/public/images/hotGameIcon2.png";
 import ArrowIcon from "@/public/images/icons/arrowIcon.svg";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -14,32 +18,56 @@ export default function HotGameSection() {
       icon: GameIcon1.src,
       title: "Mahjong Ways",
       description:
-        "4TECH™ has just launched their very first Mahjong inspired slot machine gamadsdasd adsd asda đá… a adsd a sdas đa á ",
+        "4TECH™ has just launched their very first Mahjong inspired slot machine gama",
       url: "/mahjong-ways",
+      advanceInfo: [
+        { title: "MEDIUM", subtitle: "Volatility" },
+        { title: "95.01%", subtitle: "RTP" },
+        { title: "x5000", subtitle: "Maximum Win" },
+      ],
+      bgColor: "#C48F03",
+    },
+    {
+      thumbnail: HotGameBanner2.src,
+      icon: GameIcon2.src,
+      title: "Wild Bandito",
+      description:
+        "Águila which means ‘The Eagle’ is a three-person Mexican bandit team that is activ…",
+      url: "/Wild-Bandito",
+      advanceInfo: [
+        { title: "MEDIUM", subtitle: "Volatility" },
+        { title: "95.01%", subtitle: "RTP" },
+        { title: "x5000", subtitle: "Maximum Win" },
+      ],
+      bgColor: "#C48F03",
+    },
+    {
+      thumbnail: HotGameBannerMb.src,
+      icon: GameIcon3.src,
+      title: "Tree Of Fortune",
+      description:
+        "Legend has it that a farmer was granted a seed from a deity.",
+      url: "/mahjong-ways",
+      advanceInfo: [
+        { title: "MEDIUM", subtitle: "Volatility" },
+        { title: "95.01%", subtitle: "RTP" },
+        { title: "x5000", subtitle: "Maximum Win" },
+      ],
+      bgColor: "#C48F03",
     },
     {
       thumbnail: HotGameBanner1.src,
       icon: GameIcon1.src,
       title: "Mahjong Ways",
       description:
-        "4TECH™ has just launched their very first Mahjong inspired slot machine gamadsdasd adsd asda đá… a adsd a sdas đa á ",
+        "4TECH™ has just launched their very first Mahjong inspired slot machine gama ",
       url: "/mahjong-ways",
-    },
-    {
-      thumbnail: HotGameBanner1.src,
-      icon: GameIcon1.src,
-      title: "Mahjong Ways",
-      description:
-        "4TECH™ has just launched their very first Mahjong inspired slot machine gamadsdasd adsd asda đá… a adsd a sdas đa á ",
-      url: "/mahjong-ways",
-    },
-    {
-      thumbnail: HotGameBanner1.src,
-      icon: GameIcon1.src,
-      title: "Mahjong Ways",
-      description:
-        "4TECH™ has just launched their very first Mahjong inspired slot machine gamadsdasd adsd asda đá… a adsd a sdas đa á ",
-      url: "/mahjong-ways",
+      advanceInfo: [
+        { title: "MEDIUM", subtitle: "Volatility" },
+        { title: "95.01%", subtitle: "RTP" },
+        { title: "x5000", subtitle: "Maximum Win" },
+      ],
+      bgColor: "#C48F03",
     },
   ];
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -75,9 +103,9 @@ export default function HotGameSection() {
 
   return (
     <div className="hotGame flex flex-col mb-4">
-      <div className="hotGame__header flex justify-between">
+      <div className="hotGame__header flex justify-between px-6 md:px-0">
         <span className="text-header">Hot Game</span>
-        <div className="actionGroup flex ">
+        <div className="hidden md:flex actionGroup">
           <div
             className={`arrowToLeft ${
               canScrollLeft
@@ -105,7 +133,7 @@ export default function HotGameSection() {
         </div>
       </div>
       <div
-        className="hotGame__main flex w-full overflow-hidden"
+        className="flex hotGame__main w-full overflow-hidden"
         ref={scrollContainerRef}>
         {cardList.map((item, index) => (
           <div className="hotGameCard" key={"card_" + index}>

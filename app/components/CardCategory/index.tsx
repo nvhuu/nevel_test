@@ -12,7 +12,7 @@ export default function CardCategory(props: ICardCategory) {
     router.push(`/games/${url}`);
   };
   return (
-    <div className="cardCategory w-full h-full flex p-5 ">
+    <div className="cardCategory w-full h-full flex p-4 md:p-5 ">
       <div className=" flex flex-col justify-between">
         <div
           className={`cardInfo p-5 flex flex-col gap-4`}
@@ -26,7 +26,7 @@ export default function CardCategory(props: ICardCategory) {
           <span className="cardInfo__title">{cardInfo.title}</span>
           <span className="cardInfo__subtitle">{cardInfo.subtitle}</span>
         </div>
-        <div className="groupIcon flex justify-between">
+        <div className="flex justify-between">
           {iconsLeft.map((item, index) => (
             <Image
               src={item.thumbnail}
@@ -34,14 +34,14 @@ export default function CardCategory(props: ICardCategory) {
               height={95}
               alt="iconGame"
               key={"iconGameLeft_" + index}
-              className="cursor-pointer"
+              className="cursor-pointer groupIcon"
               onClick={() => onClickImage(item.url)}
             />
           ))}
         </div>
       </div>
       <div className=" flex flex-col justify-between">
-        <div className="groupIcon flex justify-between">
+        <div className="flex justify-between">
           {iconsRight.map((item, index) => (
             <Image
               src={item.thumbnail}
@@ -49,7 +49,7 @@ export default function CardCategory(props: ICardCategory) {
               height={95}
               alt="iconGame"
               key={"iconGameLeft_" + index}
-              className="cursor-pointer"
+              className="cursor-pointer groupIcon"
               onClick={() => onClickImage(item.url)}
             />
           ))}

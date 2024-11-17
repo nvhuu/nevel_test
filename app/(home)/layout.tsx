@@ -8,7 +8,7 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Header />
       {children}
       <Footer />

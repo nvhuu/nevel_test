@@ -1,6 +1,10 @@
 .menuSection {
     font-weight: 600;
 
+    @media (max-width:768px) {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
     .searchBox {
         height: 48px;
         width: 160px;
@@ -21,6 +25,18 @@
     }
 
     .active {
-        opacity: 1;
+        border-bottom: 1px solid #000000;
+    }
+
+    .text-mb {
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .filterBtn {
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
     }
 }

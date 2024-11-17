@@ -11,8 +11,14 @@
         scroll-snap-type: both;
 
         .hotGameCard {
-            flex: 0 0 calc(50% - 10px)
+            flex: 0 0 calc(50% - 10px);
+
+            @media (max-width:768px) {
+                flex: 0 0 100%;
+            }
         }
+
+
     }
 
     .hotGame__main::-webkit-scrollbar {

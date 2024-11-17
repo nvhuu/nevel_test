@@ -11,21 +11,26 @@ import SliderSection from "./SliderSection";
 import "./style.scss";
 export default function Home() {
   const menu: IMenuGame[] = [
-    { icon: HomeIcon, title: "Games Home", value: "gameHome" },
+    {
+      icon: HomeIcon,
+      title: "Games Home",
+      value: "gameHome",
+      mobileTitle: "Home",
+    },
     { icon: TimeLineIcon, title: "Timeline", value: "timeline" },
     { icon: AllGameIcon, title: "All Games", value: "allGames" },
   ];
   const searchParams = useSearchParams();
   const activeMenu = searchParams.get("menu") || menu[0].value;
   return (
-    <section>
+    <section className="w-full">
       <SliderSection />
       <section className="container">
-        <div className="mainSection flex px-5 pt-24 pb-10 gap-10">
+        <div className="mainSection flex flex-col md:flex-row md:px-5 md:pt-24 pb-10 gap-5 md:gap-10">
           <div className="mainSection__left">
             <MenuSection menuList={menu} activeItem={activeMenu} />
           </div>
-          <div className="mainSection__right flex flex-col gap-20">
+          <div className="mainSection__right flex flex-col md:gap-20 gap-8">
             <HotGameSection />
             <HottestCategorySection />
           </div>
