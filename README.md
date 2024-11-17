@@ -1,5 +1,5 @@
 Desktop UI
-![desktop](images/desktop.png)
+![desktop](desktop.png)
 
 Mobile UI
-![mobile](images/mobile.png)
+![mobile](mobile.png)
