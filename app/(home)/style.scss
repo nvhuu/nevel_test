@@ -1,0 +1,13 @@
+.mainSection {
+
+    &__left {
+        flex-basis: 160px;
+        flex-shrink: 0;
+    }
+
+    &__right {
+        flex: 1;
+        position: relative;
+    }
+
+}

@@ -1,0 +1,21 @@
+.hotGame {
+    overflow: hidden;
+    gap: 30px;
+
+    .hotGame__main {
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        overflow: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: both;
+
+        .hotGameCard {
+            flex: 0 0 calc(50% - 10px)
+        }
+    }
+
+    .hotGame__main::-webkit-scrollbar {
+        display: none;
+    }
+}

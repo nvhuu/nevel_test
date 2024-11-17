@@ -1,0 +1,10 @@
+.sliderSection {
+    background-color: #03827E;
+    height: 576px;
+
+    &__slider {
+        max-width: 1400px;
+        margin: auto;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 11%, #000000 89%, rgba(0, 0, 0, 0) 100%);
+    }
+}

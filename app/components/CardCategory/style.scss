@@ -1,0 +1,40 @@
+.cardCategory {
+    background-color: #0000000D;
+    height: 365px;
+    border-radius: 28px;
+    gap: 30px;
+    --card-width: 210px;
+
+    .cardInfo {
+        width: var(--card-width);
+        height: var(--card-width);
+        border-radius: 20px;
+
+        &__title {
+            font-size: 21.66px;
+            font-weight: 400;
+            line-height: 16px;
+            text-decoration-skip-ink: none;
+            color: #ffffff;
+        }
+
+        &__subtitle {
+            color: #ffffff;
+            font-size: 13.78px;
+            font-weight: 400;
+            line-height: 20px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            opacity: 0.6;
+        }
+    }
+
+    .border-20 {
+        border-radius: 20px;
+        width: 210px;
+    }
+
+    .groupIcon {
+        // width: var(--card-width);
+    }
+}
