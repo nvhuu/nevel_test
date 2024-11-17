@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -10,7 +10,7 @@ export default function PageLayout({
   return (
     <main className="overflow-x-hidden">
       <Header />
-      {children}
+      <Suspense>{children}</Suspense>
       <Footer />
     </main>
   );

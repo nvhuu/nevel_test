@@ -4,7 +4,6 @@ import ArrowIcon from "@/public/images/icons/arrowRight.svg";
 import SliderImage2 from "@/public/images/sliderImage2.jpg";
 import SliderImage from "@/public/images/sliderImage_desktop.jpg";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import "./style.scss";
 interface SliderItem {
   imgSrc: string;
@@ -13,7 +12,6 @@ interface SliderItem {
   title: string;
 }
 export default function SliderSection() {
-  const router = useRouter();
   const imagesList: SliderItem[] = [
     {
       imgSrc: SliderImage.src,
