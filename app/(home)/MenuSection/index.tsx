@@ -14,7 +14,7 @@ export default function MenuSection(props: Props) {
   const router = useRouter();
   const navigateWithParams = (value: string) => {
     const queryParams = new URLSearchParams({ menu: value }).toString();
-    router.push(`?${queryParams}`);
+    router.push(`?${queryParams}`, { scroll: false });
   };
   return (
     <Fragment>
@@ -34,6 +34,11 @@ export default function MenuSection(props: Props) {
               item.value === props.activeItem ? "opacity-100" : "opacity-20"
             }`}
             key={"gameMenu_" + index}
+            // id={
+            //   props.activeItem === item.value
+            //     ? ""
+            //     : `__nav_${index}`
+            // }
             onClick={() => navigateWithParams(item.value)}>
             <Image src={item.icon} alt={item.value} width={20} height={20} />
             <span>{item.title}</span>
